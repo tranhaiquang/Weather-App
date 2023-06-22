@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView2"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:background="#78BCF1"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/inputEditText"
+                android:layout_width="369dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:background="@drawable/roundcorner"
+                android:backgroundTint="#FFFFFF"
+
+                android:drawablePadding="10px"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingRight="8dp"
+                android:text="Vietnam" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+        </com.google.android.material.navigation.NavigationView>
+
+        <ImageView
+
+            android:id="@+id/imageViewBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:orientation="vertical"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sunny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/navigationView2"
+            app:layout_constraintVertical_bias="0.0"></ImageView>
+
+        <TextView
+            android:id="@+id/textViewCelcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/textViewDay"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="monospace"
+            android:text="30°C"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDay" />
+
+        <TextView
+            android:id="@+id/textViewCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="224dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="monospace"
+            android:gravity="end"
+            android:text="Partly Cloudy"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewBackground" />
+
+        <TextView
+            android:id="@+id/textViewDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="monospace"
+            android:text="06-20 21:39"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewBackground" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewBackground" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

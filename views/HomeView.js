@@ -15,7 +15,7 @@ const HomeView = ({
     weather,
     loading
 }) => {
-    const { current, location } = weather;
+    const { current = {}, location = {} } = weather || {};
 
     return (
         <View className="flex-1 relative">
